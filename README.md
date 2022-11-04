@@ -1,6 +1,6 @@
 # Scrabble-Board
 
-The idea is that the user can create their own customisable board. Like the ones that can be found ![here](https://www.etsy.com/uk/listing/957312156/personalised-scrabble-frame-up-to-18?gpla=1&gao=1&&utm_source=google&utm_medium=cpc&utm_campaign=shopping_uk_en_gb_-home_and_living&utm_custom1=_k_CjwKCAjw8JKbBhBYEiwAs3sxNxc9nGeOj0qb4-YkB_ElNsgAPDY1dkg1oD0s0ts9pp85hcDPHHDHchoCi1MQAvD_BwE_k_&utm_content=go_14821442085_125173007022_549119977872_pla-303628061699_c__957312156engb_118543039&utm_custom2=14821442085&gclid=CjwKCAjw8JKbBhBYEiwAs3sxNxc9nGeOj0qb4-YkB_ElNsgAPDY1dkg1oD0s0ts9pp85hcDPHHDHchoCi1MQAvD_BwE)
+The idea is that the user can create their own customisable board. Like the ones that can be found [here](https://www.etsy.com/uk/listing/957312156/personalised-scrabble-frame-up-to-18?gpla=1&gao=1&&utm_source=google&utm_medium=cpc&utm_campaign=shopping_uk_en_gb_-home_and_living&utm_custom1=_k_CjwKCAjw8JKbBhBYEiwAs3sxNxc9nGeOj0qb4-YkB_ElNsgAPDY1dkg1oD0s0ts9pp85hcDPHHDHchoCi1MQAvD_BwE_k_&utm_content=go_14821442085_125173007022_549119977872_pla-303628061699_c__957312156engb_118543039&utm_custom2=14821442085&gclid=CjwKCAjw8JKbBhBYEiwAs3sxNxc9nGeOj0qb4-YkB_ElNsgAPDY1dkg1oD0s0ts9pp85hcDPHHDHchoCi1MQAvD_BwE)
 
 - Users should be able to select how big the board is.
 - Users should be able to select a starting word eg. "FAMILY"
