@@ -5,19 +5,19 @@
 }
 
 body {
-  background-color: #111;
+  background-color: #F7EDDB;
   font-family: "Roboto", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  overflow: hidden;
+  /*overflow: hidden;*/
   margin: 0;
 }
 
 .header-container {
-  color: #fff;
+  color: #000;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -60,12 +60,13 @@ button:active {
 }
 
 .square {
-  background-color: #1d1d1d;
+  background-color: #228B22;
+  border:1px solid #1d1d1d;
   display: inline-block;
   box-shadow: 0 0 2px #000;
   height: 40px;
   width: 40px;
-  margin: 2px;
+  margin: 1px;
   transition: 2s ease;
 }
 
