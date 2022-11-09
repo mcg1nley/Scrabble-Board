@@ -1,8 +1,9 @@
 "use strict";
+// Create grid based on user input
 const container = document.getElementById("container");
 // User input for height and width
-const height = 25;
-const width = 25;
+const height = 20;
+const width = 20;
 createGrid(height, width);
 function createGrid(h, w) {
     for (let i = 0; i < h; i++) {
@@ -15,4 +16,4 @@ function createGrid(h, w) {
         container.append(div);
     }
 }
-// Create grid based on user input
+// Make tiles draggable
