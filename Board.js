@@ -17,6 +17,32 @@ function createGrid(h, w) {
         container.append(div);
     }
 }
+// put this in a function
+// Words should be an array of objects 
+// Each object should be a letter
+// duplicate checks when a letter crosses another word, up, down, left, right check surrounding tiles
+function newWord(userInput) {
+    let word = [];
+    // loop each letter of string and map in array
+    for (let i = 0; i < userInput.length; i++) {
+        word[i].letter = userInput[i];
+        word[i].duplicate = false;
+        word[i].up = false;
+        word[i].down = false;
+        if (i = 0) {
+            word[i].left = false;
+        }
+        else {
+            word[i].left = true;
+        }
+        if (i = userInput.length) {
+            word[i].right = false;
+        }
+        else {
+            word[i].right = true;
+        }
+    }
+}
 // Make tiles draggable
 // I need the whole word to be draggable, but invididual letters need to line up with other squares
 const fill = document.querySelector('.fill');
