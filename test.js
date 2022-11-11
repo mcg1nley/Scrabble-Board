@@ -1,3 +1,6 @@
+// THIS IS JUST A DUMPING GROUND TO TEST JAVASCRIPT CODE OUT
+// STUFF WILL PROBABLY BE COPIED AND PASTED FROM OTHER PROJECTS HERE
+
 const container = document.getElementById("container");
 // User input buttons
 const buttonRed = document.getElementById("red");
