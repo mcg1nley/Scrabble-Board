@@ -96,3 +96,27 @@ button:active {
 .square:hover {
   transition-duration: 0s;
 }
+
+/* Moving Squares */
+
+.empty {
+  height: 40px;
+  width: 40px;
+  margin: 1px;
+  border: solid 3px black;
+}
+
+.hold {
+  border: solid 5px #ccc;
+}
+
+.hovered {
+  background-color: #333;
+  border-color: #fff;
+  border-style: dashed;
+}
+
+.fill {
+ 
+ cursor: pointer;
+}

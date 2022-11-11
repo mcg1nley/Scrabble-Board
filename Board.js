@@ -11,9 +11,42 @@ function createGrid(h, w) {
         for (let j = 0; j < w; j++) {
             const square = document.createElement("div");
             square.classList.add("square");
+            square.classList.add("empty");
             container.appendChild(square);
         }
         container.append(div);
     }
 }
 // Make tiles draggable
+// I need the whole word to be draggable, but invididual letters need to line up with other squares
+const fill = document.querySelector('.fill');
+const empties = document.querySelectorAll('.empty');
+fill.addEventListener('dragstart', dragStart);
+fill.addEventListener('dragend', dragEnd);
+for (const empty of empties) {
+    empty.addEventListener('dragover', dragOver);
+    empty.addEventListener('dragenter', dragEnter);
+    empty.addEventListener('dragleave', dragLeave);
+    empty.addEventListener('drop', dragDrop);
+}
+function dragStart() {
+    this.className += ' hold';
+    setTimeout(() => this.className = 'invisible', 0);
+}
+function dragEnd() {
+    this.className = 'fill';
+}
+function dragOver(e) {
+    e.preventDefault();
+}
+function dragEnter(e) {
+    e.preventDefault();
+    this.className += ' hovered';
+}
+function dragLeave() {
+    this.className = 'empty';
+}
+function dragDrop() {
+    this.className = 'empty';
+    this.append(fill);
+}
