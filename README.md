@@ -11,7 +11,7 @@ I want to use Typescript and eventually React for this project. Typescript becau
 
 Intially I just want to get something that works, ideally just using simple HTML, CSS and Typescript. Once I have worked out the core functionality I plan on refactoring this in to a react app.
 
-To install Typescript you can find instructions [here]https://www.typescriptlang.org/download
+To install Typescript you can find instructions [here](https://www.typescriptlang.org/download)
 
 ## Features of the project
 
