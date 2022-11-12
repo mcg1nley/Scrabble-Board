@@ -35,8 +35,8 @@ const userArray: string[] = Array.from(userInput);
     // if last letter in word then right should be false
     if (i !== (userArray.length -1)) letter.right = true;
   word.push(letter)
-  console.log(word);
-    };
+};
+console.log(word);
 };
 newWord("FAMILY");
 
