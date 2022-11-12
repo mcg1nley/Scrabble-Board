@@ -26,27 +26,19 @@ function createGrid(h: number, w: number) {
 // Each object should be a letter
 // duplicate checks when a letter crosses another word, up, down, left, right check surrounding tiles
 function newWord(userInput: string) {
-  let word: {letter: string, duplicate: boolean, up: boolean, down: boolean, left: boolean, right: boolean}[] = [];
+  let userArray: string[] = Array.from(userInput);
+  //let word: {letter: string, duplicate: boolean, up: boolean, down: boolean, left: boolean, right: boolean}[] = [];
+  let word = [];
   // loop each letter of string and map in array
-  for(let i = 0; i < userInput.length; i++){
-  word[i].letter = userInput[i]
-  word[i].duplicate = false
-  word[i].up = false
-  word[i].down = false
-  if(i = 0 ) {
-    word[i].left = false
-  }
-  else {
-    word[i].left = true
-  }
-  if(i = userInput.length) {
-word[i].right = false
-  }
-  else {
-    word[i].right = true
-  }
-  }
-}
+  for(let i = 0; i < userArray.length; i++){
+  word[i] = userArray[i];
+  //if (i !== 0 ) word[i].left = true;
+  //if (i !== userArray.length) word[i].right = true;
+    };
+    console.log(word);
+};
+newWord("FAMILY");
+
 
 
 // Make tiles draggable
@@ -93,9 +85,3 @@ function dragDrop(this: HTMLElement) {
     this.className = 'empty'
     this.append(fill)
 }
-
-
-
-
-
-
