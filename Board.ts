@@ -21,21 +21,22 @@ function createGrid(h: number, w: number) {
 
 }
 
-// put this in a function
-// Words should be an array of objects 
-// Each object should be a letter
-// duplicate checks when a letter crosses another word, up, down, left, right check surrounding tiles
+// This function will take in a word from user input and put each letter in to an array as an object
 function newWord(userInput: string) {
-  let userArray: string[] = Array.from(userInput);
-  //let word: {letter: string, duplicate: boolean, up: boolean, down: boolean, left: boolean, right: boolean}[] = [];
-  let word = [];
+  // create array from user input
+const userArray: string[] = Array.from(userInput);
+// create object array for each letter with parameters that we can use to identify the tiles around each letter
+  const word: {letter: string, duplicate: boolean, up: boolean, down: boolean, left: boolean, right: boolean}[] = [];
   // loop each letter of string and map in array
   for(let i = 0; i < userArray.length; i++){
-  word[i] = userArray[i];
-  //if (i !== 0 ) word[i].left = true;
-  //if (i !== userArray.length) word[i].right = true;
+    const letter = {letter: userArray[i], duplicate: false, up: false, down: false, left: false, right: false}
+    // if first letter in word then left should be false
+    if (i !== 0 ) letter.left = true;
+    // if last letter in word then right should be false
+    if (i !== (userArray.length -1)) letter.right = true;
+  word.push(letter)
+  console.log(word);
     };
-    console.log(word);
 };
 newWord("FAMILY");
 
