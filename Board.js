@@ -17,6 +17,7 @@ function createGrid(h, w) {
         container.append(div);
     }
 }
+// Function gets word from input and sends to newWord function - possibly combine these two
 // This function will take in a word from user input and put each letter in to an array as an object
 function newWord(userInput) {
     // create array from user input
@@ -38,7 +39,10 @@ function newWord(userInput) {
     console.log(word);
 }
 ;
-newWord("FAMILY");
+function returnText() {
+    let input = document.getElementById("userInput").value.toUpperCase();
+    newWord(input);
+}
 // Make tiles draggable
 // I need the whole word to be draggable, but invididual letters need to line up with other squares
 const fill = document.querySelector('.fill');

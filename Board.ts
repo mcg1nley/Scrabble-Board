@@ -20,6 +20,8 @@ function createGrid(h: number, w: number) {
   }
 
 }
+// Function gets word from input and sends to newWord function - possibly combine these two
+
 
 // This function will take in a word from user input and put each letter in to an array as an object
 function newWord(userInput: string) {
@@ -38,7 +40,12 @@ const userArray: string[] = Array.from(userInput);
 };
 console.log(word);
 };
-newWord("FAMILY");
+
+function returnText(){
+  let input = (<HTMLInputElement>document.getElementById("userInput")!).value.toUpperCase();
+  newWord(input)
+}
+
 
 
 
