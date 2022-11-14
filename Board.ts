@@ -25,6 +25,7 @@ function createGrid(h: number, w: number) {
 // Assign each letter to a square and send back to display
 
 
+
 // This function will take in a word from user input and put each letter in to an array as an object
 function newWord(userInput: string) {
   // Create array from user input
@@ -33,6 +34,8 @@ const userArray: string[] = Array.from(userInput);
 const wordDiv = document.createElement("div") as HTMLElement;
 wordDiv.classList.add("word");
 // Needs to add an ID to this
+const wordId: string = userInput;
+wordDiv.setAttribute('id', wordId)
 document.body.appendChild(wordDiv);
 // Create object array for each letter with parameters that we can use to identify the tiles around each letter
   const word: {letter: string, duplicate: boolean, up: boolean, down: boolean, left: boolean, right: boolean}[] = [];
@@ -43,43 +46,37 @@ document.body.appendChild(wordDiv);
     const letterDiv = document.createElement("div") as HTMLElement;
     letterDiv.classList.add("word-square", "empty");
     // Add ID to this div
-    //letterDiv.setAttribute('id',  )
+    const squareId: string = userInput + "square";
+    letterDiv.setAttribute('id', squareId);
     // Append letterDiv to wordDiv
-    //document.getElementById()
+    document.getElementById(wordId)?.appendChild;
 // Create p element for letter 
-    const letterHTML = document.createElement("p") as HTMLElement;
+    const letterHtml = document.createElement("p") as HTMLElement;
     // if first letter in word then left should be false
     if (i !== 0 ) letter.left = true;
     // if last letter in word then right should be false
     if (i !== (userArray.length -1)) letter.right = true;
   word.push(letter)
-  letterHTML.innerText = word[i].letter
-letterHTML.classList.add("letter")
+  letterHtml.innerText = word[i].letter
+letterHtml.classList.add("letter")
+// Add id to this element
+const pId: string = userInput + "P"
+    letterHtml.setAttribute('id', pId);
 // Add p element to letterDiv by Id
-//document.getElementById()
+document.getElementById(squareId)?.appendChild;
 
 };
 //wordTiles(word);
 console.log(word);
 };
 
-/*
-// CREATE WORD TILE - THIS HAS BEEN MIXED WITH newWord function
-function wordTiles(word: {letter: string, duplicate: boolean, up: boolean, down: boolean, left: boolean, right: boolean}[]) {
-  // for every letter in array create a new tile with the content being the letter
-  for (let i = 0; i < word.length; i++) {
-    const para = document.createElement("p") as HTMLElement;
-para.innerText = word[i].letter
-para.classList.add("word-square", "letter")
-document.body.appendChild(para)
-  }
-
-} */
 // Recieves text input from user and sends to function
 function returnText(){
   let input = (<HTMLInputElement>document.getElementById("userInput")!).value.toUpperCase();
   newWord(input)
-}
+};
+
+
 
 
 
