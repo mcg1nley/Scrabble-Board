@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F7EDDB;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  /*overflow: hidden;*/
+  margin: 0;
+}
+
+.header-container {
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+margin-bottom: 10px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  max-width: 400px;
+}
+
+button {
+  height: 50px;
+  width: 80px;
+  border-radius: 5px;
+  margin: 2px;
+  overflow: hidden;
+  text-align: center;
+  font-size: 1rem;
+  color: #fff;
+  transition: transform 10s linear;
+}
+
+button:active {
+  transform: scale(90%);
+}
+
+.container {
+  min-width: 500px;
+    min-height: 500px;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.square {
+  background-color: #228B22;
+  border:1px solid #1d1d1d;
+  display: inline-block;
+  box-shadow: 0 0 2px #000;
+  height: 40px;
+  width: 40px;
+  margin: 1px;
+  transition: 2s ease;
+}
+.user-words {
+  margin: 1px;
+}
+.word {
+  margin: 1px;
+}
+
+.word-square {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color:#FFFFF0;
+  border:1px solid #1d1d1d;
+  box-shadow: 0 0 2px #000;
+  height: 40px;
+  width: 40px;
+  margin: 1px;
+  transition: 2s ease;
+  text-align: center;
+  font-size: 24px;
+}
+.letter {
+  text-align: center;
+}
+
+.square:hover {
+  transition-duration: 0s;
+}
+
+/* Moving Squares */
+
+.empty {
+  
+  border: solid 3px black;
+}
+
+.hold {
+  border: solid 5px #ccc;
+}
+
+.hovered {
+  background-color: #333;
+  border-color: #fff;
+  border-style: dashed;
+}
+
+.fill {
+ cursor: pointer;
+}
