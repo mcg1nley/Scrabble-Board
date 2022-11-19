@@ -10,6 +10,8 @@ class Tile {
         this._down = false;
         this._left = false;
         this._duplicate = false;
+        this._posX = 0;
+        this._posY = 0;
     }
     get empty() {
         return this._empty;
@@ -62,5 +64,17 @@ class Tile {
     }
     set duplicate(Duplicate) {
         this._duplicate = Duplicate;
+    }
+    get posX() {
+        return this._posX;
+    }
+    set posX(PosX) {
+        this.posX = PosX;
+    }
+    get posY() {
+        return this._posY;
+    }
+    set posY(PosY) {
+        this._posY = PosY;
     }
 }

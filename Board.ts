@@ -1,4 +1,8 @@
 // Create grid based on user input
+import { createNewTile } from "./tileCreate.js";
+
+createNewTile("A", "middle");
+
 
 const container = document.getElementById("container") as HTMLElement;
 // User input for height and width

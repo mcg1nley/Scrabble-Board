@@ -8,6 +8,8 @@ class Tile {
     private _down: boolean = false;
     private _left: boolean = false;
     private _duplicate: boolean = false;
+    private _posX: number = 0;
+    private _posY: number = 0;
 
     public get empty() {
         return this._empty;
@@ -75,6 +77,22 @@ class Tile {
 
     public set duplicate(Duplicate: boolean) {
         this._duplicate = Duplicate;
+    }
+
+    public get posX() {
+        return this._posX;
+    }
+
+    public set posX(PosX: number) {
+        this.posX = PosX;
+    }
+
+    public get posY() {
+        return this._posY;
+    }
+
+    public set posY(PosY: number) {
+        this._posY = PosY;
     }
 
 }
