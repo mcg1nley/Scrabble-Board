@@ -4,12 +4,21 @@
 // Each word has a starting point on the board
 
 export class Word {
+    private _id: string = " ";
     private _length: number = 0;
     private _content: string = " ";
     private _contentArray: {}[] = [];
     private _selected: boolean = false;
     private _posX: number = 0;
     private _posY: number = 0;
+
+    public get id() {
+        return this._id;
+    }
+
+    public set id(Id: string) {
+        this._id = Id;
+    }
 
     public get length() {
         return this._length;

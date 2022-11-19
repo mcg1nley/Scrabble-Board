@@ -21,10 +21,6 @@ export class Tile {
         return this._id;
     }
     set id(Id) {
-        if (this._empty == true) {
-            console.log("This tile is empty and does not require a specific ID");
-            this._id = " ";
-        }
         this._id = Id;
     }
     get content() {

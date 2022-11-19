@@ -23,10 +23,7 @@ export class Tile {
     }
 
     public set id(Id: string) {
-        if (this._empty == true) {
-            console.log("This tile is empty and does not require a specific ID")
-            this._id = " ";
-        }
+      
         this._id = Id;
     }
 

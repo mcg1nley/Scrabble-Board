@@ -6,7 +6,7 @@ import { Tile } from "./tileClass.js";
 export function createNewTile(letter, position) {
     let tile = new Tile();
     tile.empty = false;
-    //let id: string = uuidv4();
+    //Need to make a unique id
     tile.id = "1234";
     tile.content = letter;
     if (position != "start") {

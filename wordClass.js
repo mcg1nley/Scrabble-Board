@@ -4,12 +4,19 @@
 // Each word has a starting point on the board
 export class Word {
     constructor() {
+        this._id = " ";
         this._length = 0;
         this._content = " ";
         this._contentArray = [];
         this._selected = false;
         this._posX = 0;
         this._posY = 0;
+    }
+    get id() {
+        return this._id;
+    }
+    set id(Id) {
+        this._id = Id;
     }
     get length() {
         return this._length;
