@@ -1,5 +1,4 @@
-// How can i reset these values
-class Tile {
+export class Tile {
     private _empty: boolean = true;
     private _id: string = " ";
     private _content: string = " ";

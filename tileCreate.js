@@ -2,6 +2,7 @@
 //No need to change PosX or PosY at this point. 
 // Need to consider adding UUID in order to create a unique ID which can then be used in the CSS file.
 //import {v4 as uuidv4} from "uuid";
+import { Tile } from "./tileClass.js";
 export function createNewTile(letter, position) {
     let tile = new Tile();
     tile.empty = false;
@@ -15,4 +16,5 @@ export function createNewTile(letter, position) {
         tile.right = true;
     }
     console.log(tile);
+    return tile;
 }

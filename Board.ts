@@ -1,9 +1,5 @@
+import { createNewWord } from "./wordCreate.js";
 // Create grid based on user input
-import { createNewTile } from "./tileCreate.js";
- 
-createNewTile("A", "middle");
-
-
 const container = document.getElementById("container") as HTMLElement;
 // User input for height and width
 const height: number = 20;
@@ -24,76 +20,14 @@ function createGrid(h: number, w: number) {
   }
 
 }
-// Get word from user input
-// Put word in to an array of letters
-// Assign each letter to a square and send back to display
 
-// THIS IS THE NEW FUNCTION BASED ON THE NEW CLASS SYSTEM
-function word(userInput: string) {
-  const userArray: string[] = Array.from(userInput);
-  for(let i = 0; i < userArray.length; i++) {
-    var position: string;
-     if (i == 0 ) {
-      position = "start";
-    } else if (i == userArray.length) {
-      position = "end"
-    } else position ="middle"
-    createNewTile(userArray[i], position )
-  }
-}
-
-word("mcginley");
+createNewWord("mcginley");
 
 
-// This function will take in a word from user input and put each letter in to an array as an object
-function newWord(userInput: string) {
-  // Create array from user input
-const userArray: string[] = Array.from(userInput);
-// Create div element for overall word
-const wordDiv = document.createElement("div") as HTMLElement;
-wordDiv.classList.add("word");
-// Needs to add an ID to this
-const wordId: string = userInput;
-wordDiv.setAttribute('id', wordId)
-document.body.appendChild(wordDiv);
-// Create object array for each letter with parameters that we can use to identify the tiles around each letter
-  const word: {letter: string, duplicate: boolean, up: boolean, down: boolean, left: boolean, right: boolean}[] = [];
-  // loop each letter of string and map in array
-  for(let i = 0; i < userArray.length; i++){
-    const letter = {letter: userArray[i], duplicate: false, up: false, down: false, left: false, right: false}
-    // Create Div element for each tile
-    const letterDiv = document.createElement("div") as HTMLElement;
-    letterDiv.classList.add("word-square", "empty");
-    // Add ID to this div
-    const squareId: string = userInput + "square";
-    letterDiv.setAttribute('id', squareId);
-    // Append letterDiv to wordDiv
-    document.getElementById(wordId)?.appendChild;
-// Create p element for letter 
-    const letterHtml = document.createElement("p") as HTMLElement;
-    // if first letter in word then left should be false
-    if (i !== 0 ) letter.left = true;
-    // if last letter in word then right should be false
-    if (i !== (userArray.length -1)) letter.right = true;
-  word.push(letter)
-  letterHtml.innerText = word[i].letter
-letterHtml.classList.add("letter")
-// Add id to this element
-const pId: string = userInput + "P"
-    letterHtml.setAttribute('id', pId);
-// Add p element to letterDiv by Id
-document.getElementById(squareId)?.appendChild;
 
-};
-//wordTiles(word);
-console.log(word);
-};
 
-// Recieves text input from user and sends to function
-function returnText(){
-  let input = (<HTMLInputElement>document.getElementById("userInput")!).value.toUpperCase();
-  newWord(input)
-};
+
+
 
 
 

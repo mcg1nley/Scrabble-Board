@@ -1,6 +1,4 @@
-"use strict";
-// How can i reset these values
-class Tile {
+export class Tile {
     constructor() {
         this._empty = true;
         this._id = " ";
