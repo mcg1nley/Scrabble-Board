@@ -16,6 +16,6 @@ export function createNewTile(letter: string, position: string) {
     if (position != "end") {
         tile.right = true;
     }
-    console.log(tile);
+    //console.log(tile);
 return tile;
 }
