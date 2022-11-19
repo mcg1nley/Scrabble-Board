@@ -21,6 +21,23 @@ function createGrid(h, w) {
 // Get word from user input
 // Put word in to an array of letters
 // Assign each letter to a square and send back to display
+// THIS IS THE NEW FUNCTION BASED ON THE NEW CLASS SYSTEM
+function word(userInput) {
+    const userArray = Array.from(userInput);
+    for (let i = 0; i < userArray.length; i++) {
+        var position;
+        if (i == 0) {
+            position = "start";
+        }
+        else if (i == userArray.length) {
+            position = "end";
+        }
+        else
+            position = "middle";
+        createNewTile(userArray[i], position);
+    }
+}
+word("mcginley");
 // This function will take in a word from user input and put each letter in to an array as an object
 function newWord(userInput) {
     var _a, _b;

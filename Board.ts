@@ -1,6 +1,6 @@
 // Create grid based on user input
 import { createNewTile } from "./tileCreate.js";
-
+ 
 createNewTile("A", "middle");
 
 
@@ -28,6 +28,21 @@ function createGrid(h: number, w: number) {
 // Put word in to an array of letters
 // Assign each letter to a square and send back to display
 
+// THIS IS THE NEW FUNCTION BASED ON THE NEW CLASS SYSTEM
+function word(userInput: string) {
+  const userArray: string[] = Array.from(userInput);
+  for(let i = 0; i < userArray.length; i++) {
+    var position: string;
+     if (i == 0 ) {
+      position = "start";
+    } else if (i == userArray.length) {
+      position = "end"
+    } else position ="middle"
+    createNewTile(userArray[i], position )
+  }
+}
+
+word("mcginley");
 
 
 // This function will take in a word from user input and put each letter in to an array as an object

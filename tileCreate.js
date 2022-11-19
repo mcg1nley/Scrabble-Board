@@ -1,6 +1,5 @@
 // This function creates a new tile with its default settings. 
-//No need to change PosX or PosY at this point.
-// Probably want to take a paramenter to determine what position in the word it is, this way we can alter the left and right booleans. 
+//No need to change PosX or PosY at this point. 
 // Need to consider adding UUID in order to create a unique ID which can then be used in the CSS file.
 export function createNewTile(letter, position) {
     let tile = new Tile();
