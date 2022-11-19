@@ -12,7 +12,7 @@ export function createNewWord(userInput: string) {
     for (let i = 0; i < userInputArray.length; i++){
         let position: string;
         if (i == 0) position = "start";
-        else if (i == userInputArray.length ) position = "end";
+        else if (i == userInputArray.length - 1) position = "end";
         else position = "middle";
         word.contentArray.push(createNewTile(userInputArray[i].toUpperCase(), position));
     }

@@ -12,7 +12,7 @@ export function createNewWord(userInput) {
         let position;
         if (i == 0)
             position = "start";
-        else if (i == userInputArray.length)
+        else if (i == userInputArray.length - 1)
             position = "end";
         else
             position = "middle";
