@@ -16,6 +16,6 @@ export function createNewWord(userInput: string) {
         else position = "middle";
         word.contentArray.push(createNewTile(userInputArray[i].toUpperCase(), position, false));
     }
-    console.log(word);
+    //console.log(word);
     return word;
 }

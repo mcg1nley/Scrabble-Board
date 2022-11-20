@@ -22,7 +22,15 @@ export function createNewTile(letter, position, empty) {
         tile.up = true;
     }
     const square = document.createElement("div");
-    console.log(tile);
+    // This adds a further element if tile is not blank
+    if (tile.content != " ") {
+        const letter = document.createElement("p");
+        letter.classList.add("letter");
+        letter.innerHTML = tile.content;
+        square.appendChild(letter);
+        //console.log(letter);
+    }
+    //console.log(tile);
     return square;
     //return tile
 }
