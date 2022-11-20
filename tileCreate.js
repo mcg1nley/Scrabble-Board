@@ -3,17 +3,23 @@
 // Need to consider adding UUID in order to create a unique ID which can then be used in the CSS file.
 //import {v4 as uuidv4} from "uuid";
 import { Tile } from "./tileClass.js";
-export function createNewTile(letter, position) {
+export function createNewTile(letter, position, empty) {
     let tile = new Tile();
-    tile.empty = false;
+    tile.empty = empty;
     //Need to make a unique id
     tile.id = "1234";
     tile.content = letter;
-    if (position != "start") {
+    if (position != "start" && position != "topLeft" && position != "bottomLeft" && position != "middleLeft") {
         tile.left = true;
     }
-    if (position != "end") {
+    if (position != "end" && position != "topRight" && position != "bottomRight" && position != "middleRight") {
         tile.right = true;
+    }
+    if (position == "topLeft" || position == "topMiddle" || position == "topRight" || position == "middleLeft" || position == "middleMiddle" || position == "rightMiddle") {
+        tile.down = true;
+    }
+    if (position == "bottomLeft" || position == "bottomMiddle" || position == "bottomRight" || position == "middleLeft" || position == "middleMiddle" || position == "rightMiddle") {
+        tile.up = true;
     }
     //console.log(tile);
     return tile;

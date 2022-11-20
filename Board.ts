@@ -1,4 +1,5 @@
 import { createNewWord } from "./wordCreate.js";
+
 // Create grid based on user input
 const container = document.getElementById("container") as HTMLElement;
 // User input for height and width
@@ -22,16 +23,6 @@ function createGrid(h: number, w: number) {
 }
 
 createNewWord("mcginley");
-
-
-
-
-
-
-
-
-
-
 
 
 // Make tiles draggable
