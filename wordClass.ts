@@ -1,7 +1,9 @@
-// Each word has an array of letters
-// Each word has a length
-// Each word has a selected state
-// Each word has a starting point on the board
+// _id needs to be unique to the word.
+// _length is the length of the word.
+// _content is the actual word itself.
+// _contentArray splits the word in to an array.
+// _selected will identify when the word has been grabbed by user.
+// _posX and _posY will identify the position of the first tile on the grid.
 
 export class Word {
     private _id: string = " ";

@@ -21,6 +21,8 @@ export function createNewTile(letter, position, empty) {
     if (position == "bottomLeft" || position == "bottomMiddle" || position == "bottomRight" || position == "middleLeft" || position == "middleMiddle" || position == "rightMiddle") {
         tile.up = true;
     }
-    //console.log(tile);
-    return tile;
+    const square = document.createElement("div");
+    console.log(tile);
+    return square;
+    //return tile
 }

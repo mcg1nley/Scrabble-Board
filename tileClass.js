@@ -1,3 +1,9 @@
+// _empty identifies if there is a letter in a particular tile.
+// _id needs to be unique to every tile that has a letter, and should either be blank or labbelled default if empty.
+// _content is the particular letter of tile is not blank
+// _up, _right, _down and _left identifies if there is a tile either side of the current tile. If this is a non empty tile then it will identify if there is another non-empty tile in that position (therefore unable to place), if the tile is empty then it will identify if there is another empty tile in that position.
+// _duplicate will identify when a non-empty tile is hovering over another non-empty tile of the same letter.
+// _posX an _posY will identify the particular position of the tile on a grid
 export class Tile {
     constructor() {
         this._empty = true;

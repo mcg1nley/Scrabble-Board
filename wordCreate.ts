@@ -6,7 +6,7 @@ export function createNewWord(userInput: string) {
     let length: number = userInput.length;
     word.length = length;
     word.content = userInput.toUpperCase();
-    // Need to make word Id unique
+    // Need to make word id unique.
     word.id = "1234";
     let userInputArray: string[] = Array.from(userInput);
     for (let i = 0; i < userInputArray.length; i++){

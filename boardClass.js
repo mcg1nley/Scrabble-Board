@@ -1,4 +1,4 @@
-import { createNewTile } from "./tileCreate";
+import { createNewTile } from "./tileCreate.js";
 export class Board {
     constructor() {
         this._height = 0;
@@ -16,10 +16,15 @@ export class Board {
     set width(Width) {
         this._width = Width;
     }
+    // This will create a grid based on the height and width
     createGrid() {
+        // Needs an overall container for the grid
+        const container = document.getElementById("container");
+        // Loop through the height and width creating a new tile for each iteration
         for (let i = 0; i < this._height; i++) {
             const div = document.createElement("div");
             for (let j = 0; j < this._width; j++) {
+                // Identifies the position of each square so that up,right,down and left can properly be assigned their booleans
                 let position = " ";
                 if (i == 0 && j == 0)
                     position = "topLeft";
@@ -39,8 +44,12 @@ export class Board {
                     position = "bottomMiddle";
                 else
                     position = "bottomRight";
-                createNewTile(" ", position, true);
+                let tile = createNewTile(" ", position, true);
+                tile.classList.add("square");
+                tile.classList.add("empty");
+                container.appendChild(tile);
             }
+            container.append(div);
         }
     }
 }
